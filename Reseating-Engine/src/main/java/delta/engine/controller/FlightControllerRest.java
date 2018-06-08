@@ -22,5 +22,11 @@ public class FlightControllerRest {
 	public Flight findFlight(@PathVariable("id") int flightNumber){
 		return FlightStore.findFlight(flightNumber);
 	}
+	
+	
+	/*@GetMapping("/all-flights/{name}")
+	public Flight findFlightByName(@PathVariable("name") String flightName){
+		return FlightStore.findFlightByName(flightName);
+	}*/
 
 }

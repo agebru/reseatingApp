@@ -22,7 +22,7 @@
 		<fieldset>
 			<legend>Flight Information</legend>
 			<a href="flights">Show All flights</a><br>
-			 <a href="#">Link 2</a><br> 
+			 <a href="search">Search Flight</a><br> 
 			 <a href="#">Link 3 </a><br> <br />
 		</fieldset>
 

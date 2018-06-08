@@ -43,5 +43,11 @@ public class FlightStore {
 				      .filter(flyt -> flyt.getFlightNumber() == flightNumber)
 				      .findFirst().get();
 	}
+	
+	public static Flight findFlightByName(String name) {
+		return flights.stream()
+				      .filter(flyt -> flyt.getName().equals(name))
+				      .findFirst().get();
+	}
 
 }

@@ -149,6 +149,12 @@ a:visited {
 	        margin: 1px 1px 1px 0px; 
 	        background-color: #FFFFFF;
     }
-
+    
+    
+#searchResult{
+	width:auto;
+	background-color:yellow;
+	height:auto;
+}
 
 

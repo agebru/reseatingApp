@@ -15,5 +15,11 @@ public class FlightController {
 		model.addAttribute("size", FlightStore.loadAllFligths().size());
 		return "flights-form";
 	}
+	
+	
+	@RequestMapping("/search")
+	public String findFlight() {
+		return "search-flight-form";
+	}
 
 }
