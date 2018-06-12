@@ -76,6 +76,7 @@ $(document).ready(function(){
 	$('#btnGetFlight').click(function(){
 		var flightId=$('#flightNo').val();
 		
+		
 		$.ajax({
 			type:'GET',
 			dataType:'json',
@@ -86,9 +87,11 @@ $(document).ready(function(){
 			$('#searchResult2').html('FlightName:<b>'+data.name+'</b><br/> Departure:<b>'
 					+data.from+'</b> <br/> Destination:<b>'
 					+data.to+'</b> <br/>DepartureTime:<b>'
-					+data.startTime.month+' '+data.startTime.dayOfMonth+' ,'+data.startTime.year+' '+data.startTime.hour+':'+data.startTime.minute
+					+data.startTime.month+' '+data.startTime.dayOfMonth+' ,'
+					+data.startTime.year+' '+data.startTime.hour+':'+data.startTime.minute
 					+'</b> <br/>ArrivalTime: <b>'
-					+data.destinationTime.month+' '+ data.destinationTime.dayOfMonth+' ,'+data.destinationTime.year+' '+data.destinationTime.hour+':'+data.destinationTime.minute+'</b>');
+					+data.destinationTime.month+' '+ data.destinationTime.dayOfMonth+' ,'
+					+data.destinationTime.year+' '+data.destinationTime.hour+':'+data.destinationTime.minute+'</b>');
 			
 	  /*  jQuery.each(data,function(i,val){
 		 				
