@@ -1,6 +1,10 @@
 package delta.engine.dao;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +12,11 @@ import delta.engine.model.Flight;
 
 public class FlightStore {
 	private static List<Flight> flights = new ArrayList<>();
+	
+	private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
+	private static final DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	
+	
 
 	private FlightStore() {
 
@@ -35,7 +44,20 @@ public class FlightStore {
 	}
 
 	public static List<Flight> loadAllFligths() {
-		return flights;
+		List<Flight> tempFlights=new ArrayList<>();
+		for(Flight f:flights) {
+			f.getStartTime().format(dtf);
+			f.getDestinationTime().format(dtf);	
+			   // System.out.println("startDate--> "+f.getStartTime().format(dtf)); 
+			
+			if(f.getTo().equals("Atlanta")) {
+				f.setTo("ATL");
+			}
+			tempFlights.add(f);
+			
+		}
+		
+		return tempFlights;
 	}
 
 	public static Flight findFlight(int flightNumber) {

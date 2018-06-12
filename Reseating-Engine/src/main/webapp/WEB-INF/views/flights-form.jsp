@@ -16,7 +16,7 @@
 	 
 <h2> List of All Flights</h2><hr/>
 
-<table>
+<table class="table table-striped" >
 
 <tr>
 		<th>Flight Id</th>
@@ -35,6 +35,7 @@
 <td>${fl.to }</td>
 <td>${fl.startTime }</td>
 <td>${fl.destinationTime }</td>
+<td><a href="#">Edit</a></td>
 </tr>
 
 

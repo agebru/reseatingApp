@@ -4,13 +4,14 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
-<%-- <%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %> --%>
+
 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="<c:url value='/resources/css/StyleSheet.css'/>"
-	rel="stylesheet">
+<link href="<c:url value='/resources/css/StyleSheet.css'/>"	rel="stylesheet">
+<link href="<c:url value='/resources/css/bootstrap.css'/>"  rel="stylesheet">
+	
 
 <title>Side menu</title>
 </head>

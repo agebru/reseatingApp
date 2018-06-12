@@ -1,5 +1,12 @@
 package delta.engine.app;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 import delta.engine.dao.FlightStore;
@@ -25,5 +32,35 @@ public class App
        flightData.stream()
        .filter(fl->fl.getTo().equals("Atlanta"))
        .forEach(System.out::println);
+       
+       
+       System.out.println("\n\n Printing Date Formats");
+       
+       //Note: Month should be in Capital==>MM
+       DateFormat sdf=new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+         Date now=new Date();
+       String mydf=sdf.format(now);
+       
+       System.out.println("Today's Date is ===> : "+mydf);
+       
+       
+       
+       /// Date Conversion
+       LocalDateTime toDay = LocalDateTime.now();
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
+       System.out.println("Today's LocalDateTime: "+toDay.format(formatter));
+       
+       
+       
+       DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+       LocalDate ldate=LocalDate.of(1989, Month.MAY, 21);       
+       System.out.println("Today's LocalDate: "+ldate.format(formatter2));
+       
+       
+         
+       
+       
+       
+       
     }
 }

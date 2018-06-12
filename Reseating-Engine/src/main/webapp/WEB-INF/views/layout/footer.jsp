@@ -9,6 +9,7 @@
 <!-- <style type="text/css">@import url(css/StyleSheet.css);</style> -->
 
 <link href="<c:url value="/resources/css/StyleSheet.css" />" rel="stylesheet">
+<link href="<c:url value='/resources/css/bootstrap.css'/>"  rel="stylesheet">
 <title>footer</title>
 </head>
 <body>

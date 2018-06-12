@@ -11,7 +11,7 @@
 <%-- <link href="<c:url value="/resources/css/StyleSheet.css" />" rel="stylesheet"> --%>
 
 <link href="<c:url value='/resources/css/StyleSheet.css'/>"  rel="stylesheet">
-
+<link href="<c:url value='/resources/css/bootstrap.css'/>"  rel="stylesheet">
 
       
 
